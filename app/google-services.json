@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413806446338",
+    "project_id": "receitas-de-casa-30c39",
+    "storage_bucket": "receitas-de-casa-30c39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413806446338:android:493cdc6b8266d68368241b",
+        "android_client_info": {
+          "package_name": "com.example.receitasDeCasa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413806446338-m4cnvp1mudfdsef0jd22uvt1pmrm54ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCANnvcKClWb1_oa-cX0evR1_NWRFGRRMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413806446338-m4cnvp1mudfdsef0jd22uvt1pmrm54ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
