@@ -3,15 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/drawable/ic__favorite_red.xml" value="0.3675" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/drawable/ic_add_red.xml" value="0.3675" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/drawable/ic_favoritos.xml" value="0.3675" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/drawable/ic_launcher_background.xml" value="0.252" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/drawable/splash.xml" value="0.19" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_cadastro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_home.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_lista_receitas.xml" value="0.33" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_login.xml" value="0.29891304347826086" />
-        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_main.xml" value="0.14" />
-        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_receita.xml" value="0.33" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_receita.xml" value="0.34954829742876997" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_sign_up.xml" value="0.5" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_splash.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/activity_splash_screen.xml" value="0.3" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/fragment_add_receita.xml" value="0.25" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/fragment_favoritos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/fragment_home.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/fragment_perfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/popup_Ingrediente.xml" value="0.2078804347826087" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/popup_ingrediente.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/popup_modo_preparo.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/vh_ingredientes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/vh_lista_receitas.xml" value="0.25" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/layout/vh_modo_preparo.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/bruna/AndroidStudioProjects/ProjetoFinalReceitasBruna/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
       </map>

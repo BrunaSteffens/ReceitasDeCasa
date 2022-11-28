@@ -10,12 +10,16 @@ public class Ingrediente {
         this.ingrediente = ingrediente;
     }
 
+    public Ingrediente() {
+    }
+
     public String getIngrediente() {
         return ingrediente;
     }
 
     public void setIngrediente(String ingrediente) {
         this.ingrediente = ingrediente;
+
     }
 
 }

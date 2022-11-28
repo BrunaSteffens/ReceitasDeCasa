@@ -3,10 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
-    app:startDestination="@id/menu_home">
-    <activity
-        android:id="@+id/menu_home"
-        android:name="com.example.receitasDeCasa.view.ListaReceitasActivity"
-        android:label="activity_lista_receitas"
-        tools:layout="@layout/activity_lista_receitas" />
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.receitasDeCasa.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.receitasDeCasa.fragment.FavoritosFragment"
+        android:label="fragment_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+    <fragment
+        android:id="@+id/addReceitaFragment"
+        android:name="com.example.receitasDeCasa.fragment.AddReceitaFragment"
+        android:label="fragment_add_receita"
+        tools:layout="@layout/fragment_add_receita" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.receitasDeCasa.fragment.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
 </navigation>

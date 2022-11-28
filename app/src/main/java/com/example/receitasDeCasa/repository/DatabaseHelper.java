@@ -19,6 +19,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String sqlUser = "create table users (user_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, password TEXT); ";
         db.execSQL(sqlUser);
 
+        String sqlReceita = "create table receitas (receita_id INTEGER PRIMARY KEY AUTOINCREMENT, titulo TEXT, rendimento INTEGER, tempo_preparo INTEGER, ingredientes TEXT, modo_preparo TEXT, categoria_id INTEGER, FOREIGN KEY (categoria_id) REFERENCES categorias (categoria_id));";
+        db.execSQL(sqlReceita);
+
+       // String sqlCategoria = "create table categorias (categoria_id INTEGER PRIMARY KEY, categoria TEXT);";
+       // db.execSQL(sqlCategoria);
+
     }
 
     @Override

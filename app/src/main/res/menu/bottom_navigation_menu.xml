@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
         <item
-            android:id="@+id/menu_home"
+            android:id="@+id/homeFragment"
             android:enabled="true"
             android:icon="@drawable/ic_home"
             android:title="@string/home"/>
+
         <item
-            android:id="@+id/menu_perfil"
-            android:enabled="true"
-            android:icon="@drawable/ic_perfil"
-            android:title="@string/perfil"/>
-        <item
-            android:id="@+id/menu_favoritos"
+            android:id="@+id/favoritosFragment"
             android:enabled="true"
             android:icon="@drawable/ic_favoritos"
             android:title="@string/favoritos"/>
         <item
-            android:id="@+id/menu_cadastrarReceita"
+            android:id="@+id/addReceitaFragment"
             android:enabled="true"
             android:icon="@drawable/ic_cadastrar_receita"
             android:title="@string/cadastrarReceita"/>
-
+        <item
+            android:id="@+id/perfilFragment"
+            android:enabled="true"
+            android:icon="@drawable/ic_perfil"
+            android:title="@string/perfil"/>
 </menu>

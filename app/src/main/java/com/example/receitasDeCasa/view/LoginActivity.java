@@ -1,7 +1,6 @@
 package com.example.receitasDeCasa.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,10 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import com.example.receitasDeCasa.R;
 import com.example.receitasDeCasa.presenter.LoginPresenter;
 import com.example.receitasDeCasa.presenter.LoginPresenterContract;
+import com.example.receitasDeCasa.repository.CategoriaRepositorio;
+import com.example.receitasDeCasa.repository.ReceitaRepositorio;
 import com.example.receitasDeCasa.repository.UsuarioRepositorio;
 
 public class LoginActivity extends AppCompatActivity implements LoginPresenterContract.view {
@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterCo
         TextView password = findViewById(R.id.loginPassword);
 
         UsuarioRepositorio.getInstance(this).addUserTest();
+        ReceitaRepositorio.getInstance(this).addReceitaTeste();
 
         this.presenter = new LoginPresenter(this);
 

@@ -1,11 +1,13 @@
 package com.example.receitasDeCasa.model;
 
-public class ModoPreparo {
+public class ModoPreparo implements Comparable<ModoPreparo> {
     private static final String TAG = "ModoPreparo";
     private String passo;
+    private Integer ordem=0;
 
     public ModoPreparo(String passo) {
         this.passo = passo;
+        this.ordem = ordem+1;
     }
 
     public String getPasso() {
@@ -15,4 +17,11 @@ public class ModoPreparo {
     public void setPasso(String passo) {
         this.passo = passo;
     }
+
+      @Override
+    public int compareTo(ModoPreparo o) {
+        return this.ordem.compareTo(o.ordem);
+    }
+
+
 }

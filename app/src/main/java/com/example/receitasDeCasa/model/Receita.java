@@ -1,24 +1,32 @@
 package com.example.receitasDeCasa.model;
 
+import androidx.recyclerview.widget.SortedList;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SortedSet;
 
-public class Receita {
+public class Receita  {
     private static final String TAG = "Recipe";
+
     private String titulo;
     private List<Ingrediente> ingredientes;
-    private List<ModoPreparo> modoPreparo;
+    private SortedSet<ModoPreparo> modoPreparo;
     private int rendimento;
     private int tempoPreparo;
-    private Categoria categoria;
+    private int categoria_id;
 
-    public Receita(String titulo, List<Ingrediente> ingredientes, List<ModoPreparo> modoPreparo, int rendimento, int tempoPreparo, Categoria categoria) {
+    public Receita(String titulo, List<Ingrediente> ingredientes, SortedSet<ModoPreparo> modoPreparo, int rendimento, int tempoPreparo, int categoria_id) {
         this.titulo = titulo;
         this.ingredientes = ingredientes;
         this.modoPreparo = modoPreparo;
         this.rendimento = rendimento;
         this.tempoPreparo = tempoPreparo;
-        this.categoria = categoria;
+        this.categoria_id = categoria_id;
+    }
+
+    public Receita() {
     }
 
     public String getTitulo() {
@@ -37,7 +45,7 @@ public class Receita {
         ingredientes.add(ingrediente);
     }
 
-    public List<ModoPreparo> getModoPreparo() {
+    public SortedSet<ModoPreparo> getModoPreparo() {
         return modoPreparo;
     }
 
@@ -61,11 +69,11 @@ public class Receita {
         this.tempoPreparo = tempoPreparo;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public int getCategoria() {
+        return categoria_id;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setCategoria(int categoria_id) {
+        this.categoria_id = categoria_id;
     }
 }
