@@ -48,7 +48,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toBottomOf="@+id/cad_rec_categoria" />
+                app:layout_constraintTop_toBottomOf="@+id/spinner_categoria" />
 
             <TextView
                 android:id="@+id/ingredientes_cad"
@@ -71,7 +71,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/textView13"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cad_rec_categoria" />
+                app:layout_constraintTop_toBottomOf="@+id/spinner_categoria" />
 
             <EditText
                 android:id="@+id/cad_rec_rendimento"
@@ -79,7 +79,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:hint="Porções"
-                android:text="@{receita.rendimento}"
+
                 android:textAlignment="center"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView13"
@@ -95,7 +95,6 @@
                 android:gravity="center"
                 android:hint="Título da Receita"
                 android:inputType="textMultiLine"
-                android:text="@{receita.titulo}"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -109,21 +108,26 @@
                 android:autofillHints=""
                 android:hint="Minutos"
                 android:inputType="number"
-                android:text="@{receita.tempoPreparo}"
                 android:textAlignment="center"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.447"
                 app:layout_constraintStart_toStartOf="@+id/textView12"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
             <Spinner
-                android:id="@+id/cad_rec_categoria"
-                android:layout_width="383dp"
+                android:id="@+id/spinner_categoria"
+                android:layout_width="0dp"
                 android:layout_height="48sp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:autofillHints="@string/categoria"
-                app:layout_constraintTop_toBottomOf="@+id/cad_rec_titulo"
-                tools:layout_editor_absoluteX="14dp" />
+                android:entries="@array/categoria"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cad_rec_titulo" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView2"

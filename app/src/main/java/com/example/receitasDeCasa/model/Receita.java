@@ -8,26 +8,36 @@ import java.util.List;
 import java.util.SortedSet;
 
 public class Receita  {
-    private static final String TAG = "Recipe";
+    private static final String TAG = "Receita";
 
+    private int id;
     private String titulo;
-    private List<Ingrediente> ingredientes;
-    private SortedSet<ModoPreparo> modoPreparo;
     private int rendimento;
     private int tempoPreparo;
-    private int categoria_id;
+    private String categoria;
+    private static int sequencia=1;
 
-    public Receita(String titulo, List<Ingrediente> ingredientes, SortedSet<ModoPreparo> modoPreparo, int rendimento, int tempoPreparo, int categoria_id) {
+    public Receita(int id, String titulo, int rendimento, int tempoPreparo, String categoria) {
+        this.id=sequencia++;
         this.titulo = titulo;
-        this.ingredientes = ingredientes;
-        this.modoPreparo = modoPreparo;
         this.rendimento = rendimento;
         this.tempoPreparo = tempoPreparo;
-        this.categoria_id = categoria_id;
+        this.categoria = categoria;
+    }
+
+    public Receita(String titulo, int rendimento, int tempoPreparo, String categoria) {
+        this.titulo = titulo;
+        this.rendimento = rendimento;
+        this.tempoPreparo = tempoPreparo;
+        this.categoria = categoria;
     }
 
     public Receita() {
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getTitulo() {
         return titulo;
@@ -35,22 +45,6 @@ public class Receita  {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }
-
-    public List<Ingrediente> getIngredientes() {
-        return ingredientes;
-    }
-
-    public void setIngredientes(Ingrediente ingrediente) {
-        ingredientes.add(ingrediente);
-    }
-
-    public SortedSet<ModoPreparo> getModoPreparo() {
-        return modoPreparo;
-    }
-
-    public void setModoPreparo(ModoPreparo passo) {
-        modoPreparo.add(passo);
     }
 
     public int getRendimento() {
@@ -69,11 +63,11 @@ public class Receita  {
         this.tempoPreparo = tempoPreparo;
     }
 
-    public int getCategoria() {
-        return categoria_id;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setCategoria(int categoria_id) {
-        this.categoria_id = categoria_id;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }

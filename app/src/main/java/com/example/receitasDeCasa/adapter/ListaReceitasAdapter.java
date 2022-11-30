@@ -39,8 +39,8 @@ public class ListaReceitasAdapter extends RecyclerView.Adapter {
         ); */
         ((TextView) holder.itemView.findViewById(R.id.nome_receita)).setText(receita.getTitulo());
         ((TextView) holder.itemView.findViewById(R.id.categoria)).setText(receita.getCategoria());
-        ((TextView) holder.itemView.findViewById(R.id.tempo_preparo)).setText(receita.getTempoPreparo());
-        ((TextView) holder.itemView.findViewById(R.id.rendimento)).setText(receita.getRendimento());
+        ((TextView) holder.itemView.findViewById(R.id.tempo_preparo)).setText(receita.getTempoPreparo()+"");
+        ((TextView) holder.itemView.findViewById(R.id.rendimento)).setText(receita.getRendimento()+"");
 
     }
 

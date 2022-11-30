@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,19 +35,11 @@ public class HomeFragment extends Fragment {
 
         View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_home, container, false);
 
-
-        //new ReceitaRepositorio(getView().getContext()).addReceitaTeste();
-        //está apontando para objeto nulo, verificar
-        //testar se está aparecendo o recyclerview da lista de receitas
-
-
-
         RecyclerView rv = view.findViewById(R.id.rv_lista_receitas);
-        ListaReceitasAdapter adapter = new ListaReceitasAdapter(new ReceitaRepositorio(view.getContext()).getReceitaList());
+        ListaReceitasAdapter adapter = new ListaReceitasAdapter(ReceitaRepositorio.getInstance().getReceitaList());
         rv.setAdapter(adapter);
-        LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);
-
         return view;
     }
 

@@ -12,6 +12,8 @@ import com.example.receitasDeCasa.R;
 import com.example.receitasDeCasa.presenter.LoginPresenter;
 import com.example.receitasDeCasa.presenter.LoginPresenterContract;
 import com.example.receitasDeCasa.repository.CategoriaRepositorio;
+import com.example.receitasDeCasa.repository.IngredienteRepositorio;
+import com.example.receitasDeCasa.repository.ModoPreparoRepositorio;
 import com.example.receitasDeCasa.repository.ReceitaRepositorio;
 import com.example.receitasDeCasa.repository.UsuarioRepositorio;
 
@@ -28,6 +30,8 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterCo
         TextView password = findViewById(R.id.loginPassword);
 
         UsuarioRepositorio.getInstance(this).addUserTest();
+        ModoPreparoRepositorio.getInstance(this).addModoPreparoTeste();
+        IngredienteRepositorio.getInstance(this).addIngredienteTeste();
         ReceitaRepositorio.getInstance(this).addReceitaTeste();
 
         this.presenter = new LoginPresenter(this);

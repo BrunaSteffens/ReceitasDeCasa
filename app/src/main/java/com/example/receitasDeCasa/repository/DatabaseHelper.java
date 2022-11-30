@@ -16,15 +16,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //(int id, String name, String email, String password)
         String sqlUser = "create table users (user_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, password TEXT); ";
         db.execSQL(sqlUser);
 
-        String sqlReceita = "create table receitas (receita_id INTEGER PRIMARY KEY AUTOINCREMENT, titulo TEXT, rendimento INTEGER, tempo_preparo INTEGER, ingredientes TEXT, modo_preparo TEXT, categoria_id INTEGER, FOREIGN KEY (categoria_id) REFERENCES categorias (categoria_id));";
+        //(int id, String titulo, int rendimento, int tempoPreparo, String categoria)
+        String sqlReceita = "create table receitas (receita_id INTEGER PRIMARY KEY, titulo TEXT, rendimento INTEGER, tempo_preparo INTEGER, categoria TEXT);";
         db.execSQL(sqlReceita);
 
-       // String sqlCategoria = "create table categorias (categoria_id INTEGER PRIMARY KEY, categoria TEXT);";
-       // db.execSQL(sqlCategoria);
+        //(String ingrediente, int receita_id)
+        String sqlIngrediente = "CREATE TABLE ingredientes (ingrediente_id INTEGER PRIMARY KEY AUTOINCREMENT, ingrediente TEXT, receita_id INTEGER, FOREIGN KEY (receita_id) REFERENCES receitas (receita_id));";
+        db.execSQL(sqlIngrediente);
 
+        //(String passo, int receita_id)
+        String sqlModoPreparo = "CREATE TABLE modo_preparo (modo_preparo INTEGER PRIMARY KEY AUTOINCREMENT, passo TEXT, receita_id INTEGER, FOREIGN KEY (receita_id) REFERENCES receitas (receita_id));";
+        db.execSQL(sqlModoPreparo);
     }
 
     @Override
@@ -33,7 +39,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String sql_upgrade_users = "DROP TABLE IF EXISTS users";
         db.execSQL(sql_upgrade_users);
 
-        onCreate(db);
+        String sql_upgrade_receitas = "DROP TABLE IF EXISTS receitas";
+        db.execSQL(sql_upgrade_receitas);
 
+        String sql_upgrade_ingredientes = "DROP TABLE IF EXISTS ingredientes";
+        db.execSQL(sql_upgrade_ingredientes);
+
+        String sql_upgrade_modo_preparo = "DROP TABLE IF EXISTS modo_preparo";
+        db.execSQL(sql_upgrade_modo_preparo);
+
+        onCreate(db);
     }
 }
+

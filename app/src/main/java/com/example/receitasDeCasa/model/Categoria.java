@@ -2,8 +2,40 @@ package com.example.receitasDeCasa.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+public class Categoria {
+    private String categoria;
+    public static final List<Categoria> categorias = new ArrayList<>();
 
+    private Categoria() {    }
+
+    private Categoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public static List<Categoria> getCategorias (){
+        categorias.add(new Categoria("Aves"));
+        categorias.add(new Categoria("Carnes"));
+        categorias.add(new Categoria("Peixes e frutos do mar"));
+        categorias.add(new Categoria("Vegetarianas"));
+        categorias.add(new Categoria("Veganas"));
+        categorias.add(new Categoria("Massas"));
+        categorias.add(new Categoria("Saladas"));
+        categorias.add(new Categoria("Sopas"));
+        categorias.add(new Categoria("Doces e Sobremesas"));
+        categorias.add(new Categoria("Lanches"));
+        categorias.add(new Categoria("Bebidas"));
+
+        return categorias;
+    }
+}
+
+/*
 public enum Categoria {
 
     CARNES("Carnes", 1),
@@ -24,50 +56,6 @@ public enum Categoria {
     Categoria (String nomeCategoria, int categoria_id){
         this.nomeCategoria = nomeCategoria;
         this.categoria_id = categoria_id;
-    }
-
-}
-
-
-
-
-
-/*public class Categoria {
-    private String categoria;
-    public static final List<String> categorias = new ArrayList<String>(Arrays.asList (new String[]{"Aves", "Carnes"}));
-    public static final String CATEGORIA_AVE = "Aves";
-
-
-    private Categoria() {    }
-
-    private Categoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-
-    public List<Categoria> getCategorias (){
-        List<Categoria> categorias = new ArrayList<>();
-        categorias.add(new Categoria("Aves"));
-        categorias.add(new Categoria("Carnes"));
-        categorias.add(new Categoria("Peixes e frutos do mar"));
-        categorias.add(new Categoria("Vegetarianas"));
-        categorias.add(new Categoria("Veganas"));
-        categorias.add(new Categoria("Massas"));
-        categorias.add(new Categoria("Saladas"));
-        categorias.add(new Categoria("Sopas"));
-        categorias.add(new Categoria("Doces e Sobremesas"));
-        categorias.add(new Categoria("Lanches"));
-        categorias.add(new Categoria("Bebidas"));
-
-        return categorias;
     }
 }
 */

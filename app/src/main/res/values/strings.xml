@@ -25,6 +25,18 @@
     <string name="categoria">Categoria</string>
     <string name="em_minutos">Tempo de preparo (em minutos)</string>
     <string name="em_porcoes">Rendimento (em porções)</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="categoria">;
+        <item>Aves</item>
+        <item>Carnes</item>
+        <item>Peixes e frutos do mar</item>
+        <item>Vegetarianas</item>
+        <item>Veganas</item>
+        <item>Massas</item>
+        <item>Saladas</item>
+        <item>Sopas</item>
+        <item>Doces e Sobremesas</item>
+        <item>Lanches</item>
+        <item>Bebidas</item>
+    </string-array>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.receitasDeCasa.repository;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -39,21 +40,7 @@ public class ReceitaRepositorio {
     public static ReceitaRepositorio getInstance(){ return instance; }
 
     public void addReceitaTeste(){
-        List<Ingrediente> ingredientes = new ArrayList<>();
-        Ingrediente i = new Ingrediente("1 Pacote de miojo");
-        ingredientes.add(i);
-
-        SortedSet<ModoPreparo> modoPreparo = new TreeSet<ModoPreparo>() {
-        };
-        ModoPreparo m1 = new ModoPreparo("Ferva 450ml de água");
-        ModoPreparo m2 = new ModoPreparo("Junte o macarrão e cozinhe por 3 minutos");
-        ModoPreparo m3 = new ModoPreparo("Retire do fogo e misture o tempero");
-        modoPreparo.add(m1);
-        modoPreparo.add(m2);
-        modoPreparo.add(m3);
-
-        Receita receita = new Receita("Miojo", ingredientes, modoPreparo, 1, 5, 6);
-        receitaList.add(receita);
+        Receita receita = new Receita(1, "Miojo", 1, 5, "Massas");
         addReceita(receita);
 
         Log.d(TAG, "addReceitaTeste: adicionada receita teste de " + receita.getTitulo());
@@ -65,9 +52,31 @@ public class ReceitaRepositorio {
 
     public void addReceita(Receita receita){
         //receita_id INTEGER PRIMARY KEY AUTOINCREMENT, titulo TEXT, rendimento INTEGER, tempo_preparo INTEGER, ingredientes TEXT, modo_preparo TEXT, categoria_id INTEGER, FOREIGN KEY (categoria_id) REFERENCES categorias (categoria_id));";
-        String sql = "INSERT INTO receitas (titulo, rendimento, tempo_preparo, ingredientes, modo_preparo, categoria_id) values (?, ?, ?, ?, ?, ?);";
-        Object[] args = {receita.getTitulo(), receita.getRendimento(), receita.getTempoPreparo(), receita.getIngredientes().toString(), receita.getModoPreparo().toString(), receita.getCategoria()};
+        String sql = "INSERT INTO receitas (titulo, rendimento, tempo_preparo, categoria) values (?, ?, ?, ?);";
+        Object[] args = {receita.getTitulo(), receita.getRendimento(), receita.getTempoPreparo(), receita.getCategoria()};
         database.execSQL(sql,args);
+    }
+
+    public Receita getReceita(int id){
+        String sql = "SELECT receita_id FROM receitas where receita_id = ?;";
+        String[] args = {""+id};
+        Cursor cursor = database.rawQuery(sql, args);
+
+        if (cursor.moveToFirst()){
+            return receitaFromCursor(cursor);
+        } else{
+            return null;
+        }
+    }
+
+    private Receita receitaFromCursor(Cursor cursor){
+        Receita receita = new Receita(
+                cursor.getInt(0),
+                cursor.getString(1),
+                cursor.getInt(2),
+                cursor.getInt(3),
+                cursor.getString(4));
+        return receita;
     }
 
 
